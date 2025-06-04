@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Blogeintrag 2 – Vertragsmodelle im Wandel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #fdfdfd;
+            color: #222;
+        }
+
+        h1, h2 {
+            color: #003366;
+        }
+
+        blockquote {
+            background: #f9f9f9;
+            border-left: 5px solid #999;
+            margin: 1em 0;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="blogText2"></div>
+
+    <script>
+        if (!sessionStorage.getItem("loggedIn")) {
+            window.location.href = "index.html";
+        }
+
+        const blogText2 = `
+            <h1>Vertragsmodelle im Wandel: Alte vs. Neue Lehrerregelung</h1>
+            <h2>Ein erster Blick auf Ungleichgewichte im Alltag</h2>
+
+            <p>In vielen Schulen zeigt sich ein zunehmendes Spannungsfeld zwischen LehrerInnen mit „altem“ und „neuem“ Vertragsmodell.</p>
+
+            <p>Im traditionellen Modell zählt nicht jede Unterrichtsstunde gleich: 
+            <strong>Fächer wie Mathematik oder Englisch</strong> werden mit dem Faktor <strong>1,5</strong> bewertet, 
+            während <strong>künstlerisch-praktische Fächer</strong> wie Zeichnen oft nur mit <strong>0,8</strong> gerechnet werden. 
+            Das bedeutet: Lehrkräfte dieser Fächer müssen mehr Stunden halten, um auf denselben Beschäftigungswert zu kommen.</p>
+
+            <blockquote>
+            <strong>Diese Faktoren wirken sich nicht nur auf das Stundenausmaß aus, sondern auch auf Zusatzpflichten wie Elternsprechtage oder Lernunterstützungseinheiten.</strong>
+            </blockquote>
+
+            <p>Seit der Einführung des neuen Vertragsrechts gilt diese „Wertigkeit“ der Stunden <strong>nicht mehr</strong>. 
+            Stattdessen wird von allen neu eingestellten Lehrkräften pauschal verlangt, 
+            <strong>zwei zusätzliche Stunden</strong> über das vertraglich festgelegte Maß hinaus zu leisten.</p>
+
+            <p>Dies führt zu folgender Problematik: Neue LehrerInnen haben diese Zusatzstunden oft bereits verplant – sei es für Lernunterstützung, Fördergruppen oder Administration. 
+            Wenn dann zusätzliche Aufgaben verteilt werden, <strong>greift man plötzlich auf KollegInnen mit altem Vertrag zurück</strong>, 
+            die diese Aufgaben bisher gar nicht machen mussten – und formal vielleicht auch nicht müssten.</p>
+
+            <h2>Rechtliche Grauzone?</h2>
+
+            <p>Aktuell ist unklar, wie rechtlich korrekt oder verpflichtend die Zuweisung solcher Aufgaben an "alte" Lehrkräfte ist. 
+            Hier sind dringend genaue Regelungen, klare Kommunikation und vielleicht sogar Anpassungen im Kollektivvertrag gefragt.</p>
+
+            <p>Bis dahin bleibt die Situation angespannt – mit dem Risiko wachsender Ungleichheit und Frustration im Kollegium.</p>
+
+            <hr>
+            <p style="font-size: 0.9em; color: #666; margin-top: 2em;">
+                ⏳ In Arbeit – dieser Artikel wird mit juristischer Detailanalyse ergänzt, sobald verlässliche Quellen verfügbar sind.
+            </p>
+            <p style="font-size: 0.9em; color: #666; margin-top: 1em;">
+    © Fabian Danek – Redaktion und Konzeption (Entwurf)<br>
+    Dieser Artikel wurde inhaltlich noch nicht abschließend recherchiert.<br>
+    Die sprachliche Struktur und Gliederung wurde mithilfe von ChatGPT (OpenAI) entwickelt.
+</p>
+        `;
+
+        document.getElementById("blogText2").innerHTML = blogText2;
+    </script>
+</body>
+</html>
+
