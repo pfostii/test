@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #fdfdfd; color: #222; }
+        h1, h2 { color: #b30000; }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <input id="user" placeholder="Benutzername"><br>
+    <input id="pass" type="password" placeholder="Passwort"><br>
+    <button onclick="check()">Anmelden</button>
+    <div id="ergebnis"></div>
+
+    <script src="source.js"></script>
+    <script>
+        let check_login;
+
+        const blogText = "PLACEHOLDER_BLOG_TEXT";
+        Module.onRuntimeInitialized = function () {
+            check_login = Module.cwrap('check_login', 'number', ['string', 'string']);
+        };
+
+        function check() {
+            const user = document.getElementById("user").value;
+            const pass = document.getElementById("pass").value;
+
+            if (!check_login) return;
+
+            const result = check_login(user, pass);
+            if (result === 1) {
+                sessionStorage.setItem("loggedIn", "true");
+                sessionStorage.setItem("blogText", blogText);
+                window.location.href = "dashboard.html";
+            } else {
+                document.getElementById("ergebnis").textContent = "Kein Zugriff";
+            }
+        }
+    </script>
+</body>
+</html>
