@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+            color: #222;
+        }
+        h1, h2 {
+            color: #b30000;
+        }
+        blockquote {
+            background: #f9f9f9;
+            border-left: 5px solid #ccc;
+            margin: 1em 0;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="blogText"></div>
+
+    <script>
+        if (!sessionStorage.getItem("loggedIn")) {
+            window.location.href = "index.html";
+        }
+
+        document.getElementById("blogText").innerHTML = sessionStorage.getItem("blogText");
+    </script>
+    <img src="1.jpeg" alt="Leere Kreidetafel" style="max-width: 100%;">
+
+</body>
+</html>
+

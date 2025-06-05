@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #fdfdfd;
+            color: #222;
+        }
+
+        a {
+            color: #b30000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+    color: #003366;
+    margin-bottom: 1em;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.card {
+    flex: 1 1 300px;
+    border: 1px solid #ddd;
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    color: #b30000;
+    margin-top: 0;
+}
+
+.card p {
+    color: #444;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>Panikreisen</h1>
+
+    <div class="card-container">
+        <div class="card">
+            <h2>29.05.-01.06.2025</h2>
+            <p>Wie JunglehrerInnen durch das aktuelle Berechnungsmodell der Sommerfortzahlung benachteiligt werden – ein strukturelles Problem mit drastischen Folgen.</p>
+            <a href="blog.html">Mehr erfahren →</a>
+        </div>
+
+        <div class="card">
+            <h2>Vertragsmodelle im Wandel</h2>
+            <p>Ein erster Blick auf Spannungen zwischen alten und neuen Lehrverträgen, ungleicher Stundenbewertung und wachsenden Zusatzpflichten.</p>
+            <a href="blog2.html">Mehr erfahren →</a>
+        </div>
+    </div>
+
+    <script>
+        if (!sessionStorage.getItem("loggedIn")) {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+
+</html>
+
